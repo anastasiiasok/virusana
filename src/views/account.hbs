@@ -1,0 +1,35 @@
+<h1>Welcome to your account, {{userName}}</h1>
+<h2>Your Auctions</h2>
+<a href="/users/add">+ add an auction</a>
+<div>
+  {{#each items}}
+  {{!-- <p>{{this.title}}</p> --}}
+  <p><a href="/users/item/{{this._id}}">{{this.title}}</a></p>
+  <a href="/users/{{this._id}}/edit">Edit Item</a>
+
+  <form method="POST" action="/users/{{this._id}}">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+  </form>
+  {{/each}}
+</div>
+
+ 
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

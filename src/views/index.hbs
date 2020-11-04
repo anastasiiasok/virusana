@@ -1,0 +1,15 @@
+<div>
+ 
+      <h3>Welcome to The Best Auction Ever</h3>
+      <p>For a start please login or register</p>
+
+</div>
+
+<div>
+  {{#each allItems}}
+  <p><a href="item/{{this._id}}">{{this.title}}</a></p>
+  {{/each}}
+</div>
+
+
+
