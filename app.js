@@ -10,9 +10,9 @@ const logger = require('morgan');
 
 const app = express();
 
-const userMiddle = require('./src/middleware/user');
+
 const indexRouter = require('./src/routes/index');
-const usersRouter = require('./src/routes/users');
+const dashboardRouter = require('./src/routes/dashboard');
 
 
 const dbConnect = require('./src/config/dbConnect');
@@ -53,9 +53,9 @@ app.use(session({
   },
 }));
 
-app.use(userMiddle.userName);
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/dashboard', dashboardRouter);
 
 
 
