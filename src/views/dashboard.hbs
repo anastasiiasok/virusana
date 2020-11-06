@@ -1,127 +1,139 @@
-<div class="container">    
-<h1 class="clm"> Coronavirus Live Map and realtime counter</h1>
-</div>
+<div class="container">  
+    <a href="/" class="brand-logo" id="image-index"><img src="logo.jpg" width="400" height="150"></a>
 
- <div class="container">   
+    <h1 class="clm"> Coronavirus Live Map and realtime counter</h1>
+    <p><a class="btn btn-secondary" href="https://covid19api.com/" role="button">Resources &raquo;</a></p> 
+     <h1 class="death">Total confirmed by country:<br>{{total}}</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6kZDXeJW6BM" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6kZDXeJW6BM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
- 
-
-<div class="container">
-  <h2>As of November 5th, 2020</h2>
-      <form class="api" action="/dashboard" method="GET">
-  <input class="btn btn-large btn-danger"  type="submit" value="UPDATE" ></input>
-</form>     
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Total Confirmed Cases: <h1 class="death"> {{covid.Global.TotalConfirmed}}</h1></th>
-        <th>New Confirmed Cases: <h1 class="death"> {{covid.Global.NewConfirmed}}</h1></th> 
-        <th>Total Recovered Cases:<h1 class="death">{{covid.Global.TotalRecovered}}</h1></th>
-        <th>New Recovered: <h1 class="death">{{covid.Global.NewRecovered}}</h1></th>
-     
-      </tr>
-    </thead>
-  </table>
-</div>
-
-</div>
-
-{{!-- api request --}}
-  <div class="container">
- 
-
-</div>
+    <form class="api" action="/dashboard" method="GET">
+        <input class="btn btn-large btn-danger" type="submit" value="UPDATE TO SEE GLOBAL RESULTS"></input>
+    </form>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Total Confirmed Cases: <h1 class="death"> {{covid.Global.TotalConfirmed}}</h1>
+                </th>
+                <th>New Confirmed Cases: <h1 class="death"> {{covid.Global.NewConfirmed}}</h1>
+                </th>
+                <th>Total Recovered Cases:<h1 class="death">{{covid.Global.TotalRecovered}}</h1>
+                </th>
+                <th>New Recovered: <h1 class="death">{{covid.Global.NewRecovered}}</h1></th>
+        
+            </tr>
+        </thead>
+    </table>
 
 
 <div class="container">
 
-  <div class="donut-chart-block block"> 
-                    <h1 class="death">As of November 6 </h1>
-                    <div class="donut-chart">
 
-      <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
-     <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
-     <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
-     <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
-
-                            <p class="center-date">[CASES] <br><span class="scnd-font-color"></span><p>        
-                    </div>
-                    <ul class="os-percentages horizontal-list">
-                        <li>
-                            <p> New Confirmed Cases: </p>
-                            <p>{{ covid.Global.NewConfirmed}}</p>
-                        
-                        </li>
-                        <li>
-                                <p> Total Confirmed Cases: </p>
-                            <p >{{ covid.Global.TotalConfirmed}}</p>
-                        </li>
-                    
-               
-                    </ul>
-                </div>
- 
-                <div class="line-chart-block block">
-     <div class="line-chart">
-       <div class='grafico'>
-       <ul class='eje-y'>
-         <li data-ejeY='30'></li>
-         <li data-ejeY='20'></li>
-         <li data-ejeY='10'></li>
-         <li data-ejeY='0'></li>
-       </ul>
-       <ul class='eje-x'>
-         <li>November</li>
-         <li>October</li>
-         <li>September</li>
-       </ul>
-         <span data-valor='25'>
-           <span data-valor='8'>
-             <span data-valor='13'>
-               <span data-valor='5'>   
-                 <span data-valor='23'>   
-                 <span data-valor='12'>
-                     <span data-valor='15'>
-                     </span></span></span></span></span></span></span>
-       </div>
-       
-     </div>
-                    <ul class="time-lenght horizontal-list">
-                        <li><a class="time-lenght-btn" href="#14">Week</a></li>
-                        <li><a class="time-lenght-btn" href="#15">Month</a></li>
-                        <li><a class="time-lenght-btn" href="#16">Year</a></li>
-                    </ul>
-                    <ul class="month-data clear">
-                        <li>
-                            <p>November<span class="scnd-font-color"> 2020</span></p>
-                            <p><span class="entypo-plus increment"> </span>26<sup>%</sup></p>
-                        </li>
-                        <li>
-                            <p>October<span class="scnd-font-color"> 2020</span></p>
-                            <p><span class="entypo-plus increment"> </span>38<sup>%</sup></p>
-                        </li>
-                        <li>
-                            <p>September<span class="scnd-font-color"> 2020</span></p>
-                            <p><span class="entypo-plus increment"> </span>35<sup>%</sup></p>
-                        </li>
-                    </ul>
-                </div>
-                
+</div>
 
 
-  
-  <div class="bar-chart-block block">
-    <h2 class='titular'><span> <h1 class="death"> Death Global Live Statistics: </h1> </span></h2>
-    <div class='grafico bar-chart'>
-       <ul class='eje-y'>
-         <li data-ejeY='50'>New Deaths Cases: {{ covid.Global.NewDeaths}} </li>
-         <li data-ejeY='45'> Total Deaths Cases: {{covid.Global.TotalDeaths}}</li>
- 
-       </ul>
-      
-    
+<div class="container">
+
+    <div class="donut-chart-block block">
+        <h1 class="death">As of November 6 </h1>
+        <div class="donut-chart">
+
+            <div id="porcion1" class="recorte">
+                <div class="quesito ios" data-rel="21"></div>
+            </div>
+            <div id="porcion2" class="recorte">
+                <div class="quesito mac" data-rel="39"></div>
+            </div>
+            <div id="porcion3" class="recorte">
+                <div class="quesito win" data-rel="31"></div>
+            </div>
+            <div id="porcionFin" class="recorte">
+                <div class="quesito linux" data-rel="9"></div>
+            </div>
+
+            <p class="center-date">[CASES] <br><span class="scnd-font-color"></span>
+            <p>
+        </div>
+        <ul class="os-percentages horizontal-list">
+            <li>
+                <p> New Confirmed Cases: </p>
+                <p>{{ covid.Global.NewConfirmed}}</p>
+
+            </li>
+            <li>
+                <p> Total Confirmed Cases: </p>
+                <p>{{ covid.Global.TotalConfirmed}}</p>
+            </li>
+
+
+        </ul>
     </div>
-  </div>
-            
+
+    <div class="line-chart-block block">
+        <div class="line-chart">
+            <div class='grafico'>
+                <ul class='eje-y'>
+                    <li data-ejeY='30'></li>
+                    <li data-ejeY='20'></li>
+                    <li data-ejeY='10'></li>
+                    <li data-ejeY='0'></li>
+                </ul>
+                <ul class='eje-x'>
+                    <li>November</li>
+                    <li>October</li>
+                    <li>September</li>
+                </ul>
+                <span data-valor='25'>
+                    <span data-valor='8'>
+                        <span data-valor='13'>
+                            <span data-valor='5'>
+                                <span data-valor='23'>
+                                    <span data-valor='12'>
+                                        <span data-valor='15'>
+                                        </span></span></span></span></span></span></span>
+            </div>
+
+        </div>
+        <ul class="time-lenght horizontal-list">
+            <li><a class="time-lenght-btn" href="#14">Week</a></li>
+            <li><a class="time-lenght-btn" href="#15">Month</a></li>
+            <li><a class="time-lenght-btn" href="#16">Year</a></li>
+        </ul>
+        <ul class="month-data clear">
+            <li>
+                <p>November<span class="scnd-font-color"> 2020</span></p>
+                <p><span class="entypo-plus increment"> </span>26<sup>%</sup></p>
+            </li>
+            <li>
+                <p>October<span class="scnd-font-color"> 2020</span></p>
+                <p><span class="entypo-plus increment"> </span>38<sup>%</sup></p>
+            </li>
+            <li>
+                <p>September<span class="scnd-font-color"> 2020</span></p>
+                <p><span class="entypo-plus increment"> </span>35<sup>%</sup></p>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="bar-chart-block block">
+        <h2 class='titular'><span>
+                <h1 class="death"> Death Global Live Statistics: </h1>
+            </span></h2>
+        <div class='grafico bar-chart'>
+            <ul class='eje-y'>
+                <li data-ejeY='50'>New Deaths Cases: {{ covid.Global.NewDeaths}} </li>
+                <li data-ejeY='45'> Total Deaths Cases: {{covid.Global.TotalDeaths}}</li>
+
+            </ul>
+
+
+        </div>
+    </div>
+
+</div>
+

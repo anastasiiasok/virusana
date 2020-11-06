@@ -1,12 +1,27 @@
-<div>
+
  <a href="/" class="brand-logo" id="image-index"><img src="logo.jpg" width="400" height="150"></a>
+
+      <div class="home">  
       <h3 class="death">Country by country data on virus [COVID-19] <p>
         <br><a class="btn btn-lg btn-primary" href="/dashboard" role="button">Statistics</a></p> </h3>
 
+      <h3 class="death">Total Confirmed Cases as of November 5th</h3>
+  <div class="wrapper">
+     
+    <div class="input-data">  
+
+      <form action="/dashboard" method="POST">   
+      <input type="text" name="country" required>
+      <label for="name">Enter Country</label>
+    </div>
+        <button class="btn btn-lg btn-primary" type="submit">Results</button>
+    </form>
+
+  </div>
 </div>
- 
     {{{body}}}
   </div> 
+
 
 <main role="main">
 
