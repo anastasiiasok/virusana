@@ -7,4 +7,4 @@ Here you can track coronavirus cases divided by countries. It is updated everyda
 </p>
 
 ### Technical Skills used:  
-JavaScript, HTML/CSS, Bootstrap, JavaScript, MongoDB, Node.js, Express, Handlebars, REST API
+JavaScript, HTML/CSS, Bootstrap, JavaScript, MongoDB compass, Node.js, Express, Handlebars, REST API
